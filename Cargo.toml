@@ -1,0 +1,13 @@
+[package]
+name = "from7zbson"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+seven_zip = { git = "https://github.com/ThomFox/seven_zip.git", rev = "3dbae963b98b373bd50e2b6371f866f398304336" }
+#seven_zip = { path = "../seven_zip" }
+bson = { version = "2.6.1" }
+serde_json = "1.0.96"
+serde = "1.0.163"
