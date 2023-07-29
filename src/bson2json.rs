@@ -97,7 +97,7 @@ pub fn traverse_document<F: serde_json::ser::Formatter,W: Write>(document: impl 
     for pair in document.into_iter() {
         let (key, value) = pair?;
         w.formatter.begin_object_key(&mut w.writer, first)?; first = false;
-        w.formatter.write_string_fragment(&mut w.writer, key)?;
+        write_string(w, key)?;
         w.formatter.end_object_key(&mut w.writer)?;
         w.formatter.begin_object_value(&mut w.writer)?;
         traverse_value(&value, w)?;
